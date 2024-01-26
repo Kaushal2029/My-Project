@@ -22,7 +22,7 @@ body.dark {
   padding-top: 12px;
 }
 
-@media (max-width:350px) {
+@media (max-width:300px) {
   .nav .logo {
     margin: auto;
     height: 60px;
@@ -30,7 +30,7 @@ body.dark {
   }
 
   .nav .ul li {
-    font-size: 15px;
+    font-size: 10px;
   }
 }
 

@@ -23,6 +23,22 @@ body.dark {
   padding-bottom: 10px;
 }
 
+@media (max-width:450px) {
+  .nav .logo {
+    align-items: center;
+    margin: auto;
+    height: 50px;
+    width: 60px;
+    align-items: center;
+  }
+
+  .nav .ul li {
+    align-items: center;
+    font-size:15px;
+  }
+ 
+  
+}
 @media (max-width:350px) {
   .nav .logo {
     align-items: center;

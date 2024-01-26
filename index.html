@@ -2,102 +2,155 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Toggle between Dark mode and Light mode</title>
-    <script src="https://kit.fontawesome.com/cea21fc6ed.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle between Dark mode and Light mode</title>
+  <script src="https://kit.fontawesome.com/cea21fc6ed.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-    <!------------------------------------Navbar---------------------------------- -->
-    <div class="nav">
+  <!------------------------------------Navbar---------------------------------- -->
+  <div class="nav">
 
-        <div class="button">
-            <ul type="none" class="ul">
-                <a id="Home" href="#Home">Home </a>
-                <a id="adm" href="#contact">Contact</a>
-            </ul>
-
-
-
-        </div>
-
+    <img class="logo" src="image/logo.svg" alt="">
+    <div class="button">
+      <ul class="ul">
+        <li><a id="Home" href="#Home">Home </a></li>
+        <li><a id="adm" href="#contact">Contact</a></li>
         <img class="theme" src="image/icon-sun.svg" alt="">
-
+      </ul>
     </div>
-    <!----------------------------------------Navbar End---------------------->
-    <div class="main">
-        <h1 class="h1">Hello, I am Kaushal</h1>
-        <div class="boxs">
-            <div class="box1">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
-                    blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
-                    debitis perferendis!</p>
-                <a href="#contact">See more</a>
-            </div>
-            <div class="box2">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
-                    blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
-                    debitis perferendis!</p>
-                <a href="#contact">See more</a>
-            </div>
-            <div class="box3">
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
-                    blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
-                    debitis perferendis!</p>
-                <a href="#contact">See more</a>
-            </div>
-        </div>
+  </div>
+
+
+  <!----------------------------------------Navbar End---------------------->
+  <!------------------------------SlideShow stat--------->
+  <div class="slideshow-container">
+    <div class="mySlides-fade">
+      <div class="numbertext">1 / 6</div>
+      <img src="image/k1.jpg" />
+      <!-- <div class="text">Caption Text</div> -->
     </div>
-    <!----------------------------------------------Main secition end  --------------->
 
-
-
-    <!----------------------------------------------Contact  ------------------------------->
-    <h1 id="contact">Contact</h1>
-    <div class="contact">
-        <div class="boxs">
-            <div class="box1">
-                <h1>Contact me</h1>
-                <p><i class="fa-solid fa-paper-plane"></i>Contact@example.com</p>
-                <p> <i class="fa-solid fa-phone"></i></i>+91 1234567890</p>
-            </div>
-            <div class="box2">
-                <form>
-                    <input type="text" name="name" placeholder="your name" required>
-                    <input type="text" name="email" placeholder="your email" required>
-                    <textarea name="message" rows="6" placeholder="your message"></textarea>
-                    <button type="submit" class="btn btn2">submit</button>
-                </form>
-
-            </div>
-        </div>
+    <div class="mySlides-fade">
+      <div class="numbertext">2 / 6</div>
+      <img src="image/k2.jpg" />
+      <!-- <div class="text">Caption Two</div> -->
     </div>
-    <div class="copy-right">
-        <p>Copyright Kaushal. <i class="fas fa-heart"></i> </p>
 
+    <div class="mySlides-fade">
+      <div class="numbertext">3 / 6</div>
+      <img src="image/k3.jpg" />
+      <!-- <div class="text">Caption Three</div> -->
     </div>
+    <div class="mySlides-fade">
+      <div class="numbertext">4 / 6</div>
+      <img src="image/k4.jpg" />
+    </div>
+    <div class="mySlides-fade">
+      <div class="numbertext">5 / 6</div>
+      <img src="image/k5.jpg" />
+      <!-- <div class="text">Caption Two</div> -->
+    </div>
+    <div class="mySlides-fade">
+      <div class="numbertext">6 / 6</div>
+      <img src="image/k6.jpg" />
+      <!-- <div class="text">Caption Two</div> -->
+    </div>
+
+  </div>
+
+  <br />
+
+  <div style="text-align: center">
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides-fade");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) {
+        slideIndex = 1;
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 2000); // Change image every 2 seconds
+    }
+  </script>
+    <!--------------------- Slide Show end---------------->
+  <div class="main">
+    <h1 class="h1">Hello, I am Kaushal</h1>
+    <div class="boxs">
+      <div class="box1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
+          blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
+          debitis perferendis!</p>
+        <a href="#contact">See more</a>
+      </div>
+      <div class="box2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
+          blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
+          debitis perferendis!</p>
+        <a href="#contact">See more</a>
+      </div>
+      <div class="box3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. At nostrum sint placeat beatae quibusdam
+          blanditiis nam sunt possimus quia impedit? Eos officiis blanditiis ipsam placeat optio quis iusto
+          debitis perferendis!</p>
+        <a href="#contact">See more</a>
+      </div>
+    </div>
+  </div>
+  <!----------------------------------------------Main secition end  --------------->
+
+
+
+  <!----------------------------------------------Contact  ------------------------------->
+  <h1 id="contact">Contact</h1>
+  <div class="contact">
+    <div class="boxs">
+      <div class="box1">
+        <h1>Contact me</h1>
+        <p><i class="fa-solid fa-paper-plane"></i>Contact@example.com</p>
+        <p> <i class="fa-solid fa-phone"></i></i>+91 1234567890</p>
+      </div>
+      <div class="box2">
+        <form>
+          <input type="text" name="name" placeholder="your name" required>
+          <input type="text" name="email" placeholder="your email" required>
+          <textarea name="message" rows="6" placeholder="your message"></textarea>
+          <button type="submit" class="btn btn2">submit</button>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <div class="copy-right">
+    <p class="copy-kausha">Copyright</p>
+
+  </div>
 </body>
 <script>
-
-    // var tablinks = document.getElementsByClassName("tab-links");
-    // var tabcontent = document.getElementsByClassName("tab-content");
-
-
-    var sidemenu = document.getElementById("sidemenu");
-    function openmenu() {
-        sidemenu.style.right = "0px";
-    }
-    function closemenu() {
-        sidemenu.style.right = "-200px";
-    }
+  const themeIcon = document.querySelector(".theme");
+  themeIcon.addEventListener("click", () => {
+    document.body.classList.toggle("dark"), document.body.classList.contains("dark") ? (themeIcon.src = "image/icon-moon.svg") : (themeIcon.src = "image/icon-sun.svg");
+  });
 </script>
-<script>
-    const themeIcon = document.querySelector(".theme");
-    themeIcon.addEventListener("click", () => {
-        document.body.classList.toggle("dark"), document.body.classList.contains("dark") ? (themeIcon.src = "image/icon-moon.svg") : (themeIcon.src = "image/icon-sun.svg");
-    });
-</script>
-
-</html>
